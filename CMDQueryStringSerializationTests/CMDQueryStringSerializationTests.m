@@ -8,7 +8,7 @@
 
 @import XCTest;
 
-#import <CMDQueryStringSerialization/CMDQueryStringSerialization.h>
+#import <CMDQueryStringKit/CMDQueryStringKit.h>
 
 @interface CMDQueryStringSerializationTests : XCTestCase
 
@@ -31,9 +31,9 @@
 - (void)testTwoKeyValuePairs {
     NSString *desiredString = @"key_one=value_one&key_two=value_two";
     NSDictionary *desiredDictionary = @{
-        @"key_one" : @"value_one",
-        @"key_two" : @"value_two"
-    };
+                                        @"key_one" : @"value_one",
+                                        @"key_two" : @"value_two"
+                                        };
     
     NSString *actualString = [CMDQueryStringSerialization queryStringWithDictionary:desiredDictionary];
     XCTAssertEqualObjects(actualString, desiredString, @"Query string is incorrect.");
@@ -46,8 +46,8 @@
 - (void)testQueryStringWithRepeatingParameterNoBrackets {
     NSString *desiredString = @"key=one&key=two";
     NSDictionary *desiredDictionary = @{
-        @"key" : @[ @"one", @"two" ]
-    };
+                                        @"key" : @[ @"one", @"two" ]
+                                        };
     
     NSString *actualString = [CMDQueryStringSerialization queryStringWithDictionary:desiredDictionary options:CMDQueryStringWritingOptionArrayRepeatKeys];
     XCTAssertEqualObjects(actualString, desiredString, @"Query string is incorrect.");
@@ -60,8 +60,8 @@
 - (void)testQueryStringWithRepeatingParameterWithBrackets {
     NSString *desiredString = @"key[]=one&key[]=two";
     NSDictionary *desiredDictionary = @{
-        @"key" : @[ @"one", @"two" ]
-    };
+                                        @"key" : @[ @"one", @"two" ]
+                                        };
     
     NSString *actualString = [CMDQueryStringSerialization queryStringWithDictionary:desiredDictionary options:CMDQueryStringWritingOptionArrayRepeatKeysWithBrackets];
     XCTAssertEqualObjects(actualString, desiredString, @"Query string is incorrect.");
@@ -74,8 +74,8 @@
 - (void)testQueryStringWithCommaDelimitedValue {
     NSString *desiredString = @"key=one,two";
     NSDictionary *desiredDictionary = @{
-        @"key" : @[ @"one", @"two" ]
-    };
+                                        @"key" : @[ @"one", @"two" ]
+                                        };
     
     NSString *actualString = [CMDQueryStringSerialization queryStringWithDictionary:desiredDictionary options:CMDQueryStringWritingOptionArrayCommaSeparatedValues];
     XCTAssertEqualObjects(actualString, desiredString, @"Query string is incorrect.");
@@ -88,9 +88,9 @@
 - (void)testQueryStringWithEmoji {
     NSString *desiredString = @"grinning=%F0%9F%98%81&winking=%F0%9F%98%89";
     NSDictionary *desiredDictionary = @{
-        @"grinning" : @"😁",
-        @"winking" : @"\U0001F609"
-    };
+                                        @"grinning" : @"😁",
+                                        @"winking" : @"\U0001F609"
+                                        };
     
     NSString *actualString = [CMDQueryStringSerialization queryStringWithDictionary:desiredDictionary];
     XCTAssertEqualObjects(actualString, desiredString, @"Query string is incorrect.");
@@ -166,8 +166,8 @@
 - (void)testDictionaryWithDateAsUnixTimestamp {
     NSDate *inputDate = [NSDate date];
     NSDictionary *inputDictionary = @{
-        @"date" : inputDate
-    };
+                                      @"date" : inputDate
+                                      };
     NSString *desiredString = [NSString stringWithFormat:@"date=%@", @((NSInteger)[inputDate timeIntervalSince1970])];
     
     NSString *actualString = [CMDQueryStringSerialization queryStringWithDictionary:inputDictionary];
@@ -213,9 +213,9 @@
 - (void)testDateAsISO8601String {
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:1406759723];
     NSString *desiredString = @"date=2014-07-30T15%3A35%3A23-07%3A00";
-
+    
     NSDictionary *dictionary = @{ @"date": date };
-
+    
     NSString *actualString = [CMDQueryStringSerialization queryStringWithDictionary:dictionary options:CMDQueryStringWritingOptionDateAsISO8601String];
     XCTAssertEqualObjects(actualString, desiredString, @"Query parameters are incorrect.");
 }
