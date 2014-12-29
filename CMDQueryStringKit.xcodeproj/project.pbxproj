@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		266481DD1A521F3B00F412B8 /* ISO8601.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 266481DC1A521F3B00F412B8 /* ISO8601.framework */; };
 		269EDBA71A2E01600061FE90 /* CMDQueryStringKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269EDB9B1A2E01600061FE90 /* CMDQueryStringKit.framework */; };
 		269EDBAE1A2E01600061FE90 /* CMDQueryStringSerializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 269EDBAD1A2E01600061FE90 /* CMDQueryStringSerializationTests.m */; };
 		269EDBC01A2E04310061FE90 /* CMDQueryStringReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 269EDBB71A2E04310061FE90 /* CMDQueryStringReader.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -18,7 +19,6 @@
 		269EDBC61A2E04310061FE90 /* CMDQueryStringWritingOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 269EDBBD1A2E04310061FE90 /* CMDQueryStringWritingOptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		269EDBC71A2E04310061FE90 /* NSString+CMDQueryStringSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 269EDBBE1A2E04310061FE90 /* NSString+CMDQueryStringSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		269EDBC81A2E04310061FE90 /* NSString+CMDQueryStringSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 269EDBBF1A2E04310061FE90 /* NSString+CMDQueryStringSerialization.m */; };
-		269EDBCA1A2E06CD0061FE90 /* ISO8601.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269EDBC91A2E06CD0061FE90 /* ISO8601.framework */; };
 		269EDBCC1A2E0E830061FE90 /* CMDQueryStringKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 269EDBCB1A2E0E5B0061FE90 /* CMDQueryStringKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -33,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		266481DC1A521F3B00F412B8 /* ISO8601.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ISO8601.framework; path = Carthage/Build/iOS/ISO8601.framework; sourceTree = SOURCE_ROOT; };
 		269EDB9B1A2E01600061FE90 /* CMDQueryStringKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CMDQueryStringKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		269EDB9F1A2E01600061FE90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		269EDBA61A2E01600061FE90 /* CMDQueryStringKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CMDQueryStringKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,7 +48,6 @@
 		269EDBBD1A2E04310061FE90 /* CMDQueryStringWritingOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDQueryStringWritingOptions.h; sourceTree = "<group>"; };
 		269EDBBE1A2E04310061FE90 /* NSString+CMDQueryStringSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CMDQueryStringSerialization.h"; sourceTree = "<group>"; };
 		269EDBBF1A2E04310061FE90 /* NSString+CMDQueryStringSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CMDQueryStringSerialization.m"; sourceTree = "<group>"; };
-		269EDBC91A2E06CD0061FE90 /* ISO8601.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ISO8601.framework; path = ../Carthage.build/iOS/ISO8601.framework; sourceTree = "<group>"; };
 		269EDBCB1A2E0E5B0061FE90 /* CMDQueryStringKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMDQueryStringKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				269EDBCA1A2E06CD0061FE90 /* ISO8601.framework in Frameworks */,
+				266481DD1A521F3B00F412B8 /* ISO8601.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +110,7 @@
 		269EDB9E1A2E01600061FE90 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				269EDBC91A2E06CD0061FE90 /* ISO8601.framework */,
+				266481DC1A521F3B00F412B8 /* ISO8601.framework */,
 				269EDB9F1A2E01600061FE90 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -160,6 +160,7 @@
 				269EDB971A2E01600061FE90 /* Frameworks */,
 				269EDB981A2E01600061FE90 /* Headers */,
 				269EDB991A2E01600061FE90 /* Resources */,
+				26A4D2811A52FA2F00F26DB0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -240,6 +241,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26A4D2811A52FA2F00F26DB0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		269EDB961A2E01600061FE90 /* Sources */ = {
@@ -365,7 +382,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage.build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = CMDQueryStringSerialization/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -384,7 +401,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage.build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = CMDQueryStringSerialization/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

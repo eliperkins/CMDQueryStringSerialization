@@ -1,3 +1,5 @@
 [submodule "Carthage.checkout/ISO8601"]
-	path = Carthage.checkout/ISO8601
+	path = Carthage/Checkouts/ISO8601
+	url = https://github.com/eliperkins/ISO8601.git
+[submodule "Carthage/Checkouts/ISO8601"]
 	url = https://github.com/eliperkins/ISO8601.git
